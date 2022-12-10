@@ -3,9 +3,9 @@ import './RatingComponent.css'
 import iconStar from './assets/icon-star.svg'
 
 function RatingComponent() {
-    const [rating, setRating] = useState(0)
+    const [rating, setRating] = useState<number>(0)
 
-    const availableRatings = [1,2,3,4,5]
+    const availableRatings: Array<number> = [1,2,3,4,5]
 
     return (
         <div className="rating-container">
@@ -15,7 +15,7 @@ function RatingComponent() {
 
             <div className="rating-numbers-container">
                 {availableRatings.map((number) => (
-                        <div className={rating === number ? 'checked' : ''} onClick={() => setRating(number)}>
+                        <div className={rating === number ? 'checked' : ''} onClick={() => setRating(number)} key={number}>
                             {number}
                         </div>
                     ))}
