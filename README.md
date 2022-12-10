@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot/Rating component.png)
+![](./screenshot/rating-component.png)
 
 ![](./screenshot/thanks.png)
 
