@@ -2,7 +2,11 @@ import { useState } from 'react'
 import './RatingComponent.css'
 import iconStar from './assets/icon-star.svg'
 
-function RatingComponent() {
+type RatingComponentProps = {
+    handleSubmit: Function;
+};
+
+function RatingComponent({handleSubmit}: RatingComponentProps) {
     const [rating, setRating] = useState<number>(0)
 
     const availableRatings: Array<number> = [1,2,3,4,5]
@@ -22,10 +26,11 @@ function RatingComponent() {
             </div>
 
             <div>
-                <button className={'rating-button'}>Submit</button>
+                <button onClick={() => handleSubmit(true,rating)} className={'rating-button'}>Submit</button>
             </div>
         </div>
     )
 }
+
 
 export default RatingComponent
