@@ -8,6 +8,9 @@ function App()
     const [selectedRating, setSelectedRating] = useState<number>(0);
 
     const handleSubmit = (sub:boolean,value: number) => {
+        if(value <= 0) {
+            return;
+        }
         setIsSubmit(sub);
         setSelectedRating(value)
     };

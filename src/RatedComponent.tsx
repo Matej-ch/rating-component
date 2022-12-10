@@ -1,7 +1,5 @@
-import { useState } from 'react'
 import './RatingComponent.css'
 import illustration from './assets/illustration-thank-you.svg'
-
 
 function RatedComponent({rating}: {rating:number}) {
     return (
