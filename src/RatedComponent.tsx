@@ -1,11 +1,11 @@
 import './RatingComponent.css'
 import illustration from './assets/illustration-thank-you.svg'
 
-function RatedComponent({rating}: {rating:number}) {
+function RatedComponent({rating}: { rating: number }) {
     return (
         <div className="rating-container submitted">
             <div className={'illustration'}>
-                <img src={illustration} />
+                <img src={illustration} alt="Thank you illustration"/>
             </div>
 
             <div className={'rating-notification-container'}>
@@ -14,7 +14,8 @@ function RatedComponent({rating}: {rating:number}) {
 
 
             <h1 className={'center'}>Thank you</h1>
-            <p className={'center'}>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch</p>
+            <p className={'center'}>We appreciate you taking the time to give a rating. If you ever need more support,
+                don't hesitate to get in touch</p>
         </div>
     )
 }
